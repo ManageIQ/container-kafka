@@ -1,5 +1,6 @@
 FROM centos
-WORKDIR /opt/kafka
+ENV WORKDIR /opt/kafka/
+WORKDIR $WORKDIR
 RUN mkdir -p $WORKDIR \
   && cd $WORKDIR \
   && yum -y install java-1.8.0-openjdk-headless tar \
