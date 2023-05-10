@@ -7,5 +7,5 @@ RUN mkdir -p $WORKDIR \
   && curl -s https://www.mirrorservice.org/sites/ftp.apache.org/kafka/2.0.0/kafka_2.12-2.0.0.tgz | tar -xz --strip-components=1 \
   && yum clean all
 RUN chmod -R a=u $WORKDIR
-VOLUME /tmp/kafka-logs /tmp/zookeeper
-EXPOSE 2181 2888 3888 9092
+VOLUME /tmp/kafka-logs
+EXPOSE 9092 9093
